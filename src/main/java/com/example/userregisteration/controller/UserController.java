@@ -12,9 +12,8 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    @Autowired
-    UserRepository userRepository;
-
+	@Autowired
+   UserRepository userRepository;
     @CrossOrigin()
     @PostMapping("/users/register")
     public Status registerUser(@Valid @RequestBody User newUser) {

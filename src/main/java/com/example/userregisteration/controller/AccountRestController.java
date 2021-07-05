@@ -20,7 +20,7 @@ import java.util.Map;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("api/user")
+@RequestMapping("api/users")
 public class AccountRestController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountRestController.class);
@@ -42,7 +42,7 @@ public class AccountRestController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> checkAccountBalance(
-            // TODO In the future support searching by card number in addition to sort code and account number
+            //  In the future support searching by card number in addition to sort code and account number
             @Valid @RequestBody AccountUtil accountInput) {
         LOGGER.debug("Triggered AccountRestController.accountInput");
 
